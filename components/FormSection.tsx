@@ -22,15 +22,13 @@ const handleSubmit = async (event:any) => {
   }
   const MySwal = withReactContent(Swal);
 
-  
-
   fetch(endpoint, options)
     .then((response) => response.json())
     .then(function(res){
       if(res.error){
         let msg = 'Something went wrong!';
-        let property = res.msg[0]['property'];
-        let value = res.msg[0]['value'] ?? null;
+        let property = res.message[0]['property'];
+        let value = res.message[0]['value'] ?? null;
         if(property && !value){
           msg = property + ' cannot be empty';
         } else if(property && value){
@@ -75,9 +73,9 @@ const FormSection = () => {
             <div className="container  flex flex-col items-center">
               <form className="w-80 p-4 flex flex-col" onSubmit={handleSubmit}>
                 <h1 className='text-Red text-xl py-2 text-left'>Get started for free</h1>
-                <input type="text" id="name" name="name" placeholder="Enter your name" className="mb-3 py-3 px-4 border-none  rounded-md " />
-                <input type="email" id="email" name="email" placeholder="Enter your email" className="mb-3 py-3 px-4  border-none  rounded-md" />
-                <input type="password" id='password' name="password" placeholder="Password" className="mb-3 py-3 px-4  border-none  rounded-md" />
+                <input required={true} type="text" id="name" name="name" placeholder="Enter your name" className="mb-3 py-3 px-4 border-none  rounded-md " />
+                <input required={true} type="email" id="email" name="email" placeholder="Enter your email" className="mb-3 py-3 px-4  border-none  rounded-md" />
+                <input required={true} type="password" id='password' name="password" placeholder="Password" className="mb-3 py-3 px-4  border-none  rounded-md" />
                 <button type='submit' className=" bg-Yellow p-3 rounded-lg font-semibold text-lg ">GET STARTED</button>
 
               </form>
