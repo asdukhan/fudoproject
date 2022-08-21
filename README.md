@@ -6,11 +6,12 @@ To run, clone the repository and run the following cli command:
 
 ```bash
 npm install
-
 npm run build
-# or
-yarn run build
 
+OR
+
+yarn install
+yarn run build
 ```
 
 
