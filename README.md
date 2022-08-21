@@ -2,12 +2,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+To run, clone the repository and run the following cli command:
 
 ```bash
+npm install
+
 npm run build
 # or
 yarn run build
+
 ```
 
 
