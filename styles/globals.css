@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mt-3.card.card-compact.dropdown-content.w-96.bg-base-100.shadow.z-50 {
+    z-index: 10000 !important;
+}
