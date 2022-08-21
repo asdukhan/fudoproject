@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import MenuRow from "./menuRow";
-import { Tabs, Navbar, Alert } from "flowbite-react";
+import { Tabs } from "flowbite-react";
 
 function MenuWrapper() {
     const [menuWrapper, setMenuWrapper] = useState()
